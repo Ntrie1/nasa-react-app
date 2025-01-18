@@ -2,6 +2,15 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer>Footer</footer>
+    <footer>
+        <div>
+            <h2>
+                The Brutal Marsian Landscape
+            </h2>
+            <h1>
+                APOD PROJECT
+            </h1>
+        </div>
+    </footer>
   )
 }
