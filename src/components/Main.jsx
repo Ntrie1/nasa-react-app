@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Main() {
+export default function Main({data}) {
   return (
     <div className='imgContianer'>
         <img 
-        src="mars.webp" 
-        alt="mars-demo-pic" 
+        src={data.hdurl }
+        alt={data.title}
         className='bgImage'
         />
     </div>
