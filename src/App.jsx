@@ -7,7 +7,7 @@ function App() {
   const [showModal, setShowModel] = useState(false);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false)
-  
+
   useEffect(() => {
     const fetchAPIData = async () => {
       const NASA_KEY = import.meta.env.VITE_NASA_API;
@@ -17,16 +17,16 @@ function App() {
         const res = await fetch(url);
         const apiData = await res.json();
         setData(apiData);
-        
+
       } catch (error) {
         console.log(error.message);
-        
+
       }
-      
-      
+
+
     }
     fetchAPIData();
-  },[])
+  }, [])
 
   const handleDisplayModel = () => {
     setShowModel((prev) => !prev);
@@ -39,8 +39,12 @@ function App() {
           <i className="fa-solid fa-gear"></i>
         </div>
       )}
-     { showModal && (<SideBar handleDisplayModel={handleDisplayModel} />)}
-      <Footer handleDisplayModel={handleDisplayModel}  />
+
+      {showModal && 
+      (<SideBar data={data} handleDisplayModel={handleDisplayModel} />)}
+
+      {data &&
+       (<Footer data={data} handleDisplayModel={handleDisplayModel} />)}
     </>
   )
 }
