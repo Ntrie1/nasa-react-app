@@ -8,8 +8,11 @@ export default function Footer() {
                 The Brutal Marsian Landscape
             </h2>
             <h1>
-                APOD PROJECT
+                Glaxio PROJECT
             </h1>
+            <button>
+            <i className="fa-solid fa-info"></i>
+            </button>
         </div>
     </footer>
   )
